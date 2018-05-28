@@ -1,0 +1,43 @@
+https://www.youtube.com/watch?v=U5hOU-xxQgk
+https://www.adafruit.com/product/2097
+
+http://forum.arduino.cc/index.php?topic=5014.0
+
+
+tepalu temp
+vandens temp
+GPS su lokacija ir sekimu
+jeigu greitis ir fuel consumption yra padaryti MPG
+Serviso indikatorius
+
+http://forum.arduino.cc/index.php?topic=303531.0
+https://forum.arduino.cc/index.php?topic=121373.0
+https://arduino.stackexchange.com/questions/26803/connecting-multiple-tft-panels-to-arduino-uno-via-spi
+
+I2C bus for lcd touchscreens
+https://forum.arduino.cc/index.php?topic=395572.0
+
+Multiple serial sensors
+http://forum.arduino.cc/index.php?topic=303531.0
+
+multiple nextion panels on serial ports
+http://support.iteadstudio.com/support/discussions/topics/11000009009
+https://www.arduino.cc/en/Tutorial/TwoPortReceive
+
+UNO connected to nextion
+https://www.youtube.com/watch?v=mVuy33FK9L0
+
+nextion 3.5 
+https://www.ebay.com/itm/3-5-Nextion-HMI-TFT-LCD-Display-Module-For-Raspberry-Pi-2-A-B-Arduino-Kits/191711148797?epid=860763976&hash=item2ca2dffafd:g:D2IAAOSw2n5ZiZj4
+
+https://www.ebay.com/itm/Nextion-3-5-HMI-TFT-LCD-Display-Module-For-Raspberry-Pi-2-A-B-New/332521049219?epid=685318970&hash=item4d6bcc8c83:g:ZecAAOSwzbxaXFEp
+
+arduino UNO
+https://www.ebay.com/itm/ATmega328P-CH340G-UNO-R3-Board-USB-Cable-Compatible-with-Arduino/122800287580?epid=1184299414&hash=item1c9777af5c:g:rT4AAOSwR2RaPKQU
+
+teensy 
+https://www.sparkfun.com/products/13736
+https://www.youtube.com/watch?v=xwzE4Q0uz74
+
+Voltage divider
+x
