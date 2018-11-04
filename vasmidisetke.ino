@@ -29,27 +29,23 @@ NexPage page1 = NexPage(1, 0, "page1");
 NexPage page2 = NexPage(2, 0, "page2");
 NexPage page3 = NexPage(3, 0, "page3");
 
-  NexButton nextPageBtnPg0 = NexButton(0, 3, "btnNextPage");
-    NexButton nextPageBtnPg1 = NexButton(1, 5, "btnNextPage");
-      NexButton nextPageBtnPg2 = NexButton(2, 5, "btnNextPage");
-        NexButton nextPageBtnPg3 = NexButton(3, 1, "btnNextPage");
+NexButton nextPageBtnPg0 = NexButton(0, 3, "btnNextPage");
+NexButton nextPageBtnPg1 = NexButton(1, 5, "btnNextPage");
+NexButton nextPageBtnPg2 = NexButton(2, 5, "btnNextPage");
+NexButton nextPageBtnPg3 = NexButton(3, 1, "btnNextPage");
 
+NexButton chargeMinusBtnPg3 = NexButton(3, 8, "chargeMinusBtn");
+NexButton chargePlusBtnPg3 = NexButton(3, 5, "chargePlusBtn");
 
+NexButton waterMinusBtnPg3 = NexButton(3, 9, "waterMinusBtn");
+NexButton waterPlusBtnPg3 = NexButton(3, 6, "waterPlusBtn");
 
+NexButton oilMinusBtnPg3 = NexButton(3, 10, "oilMinusBtn");
+NexButton oilPlusBtnPg3 = NexButton(3, 7, "oilPlusBtn");
 
-
-  NexButton chargeMinusBtnPg3 = NexButton(3, 8, "chargeMinusBtn");
-  NexButton chargePlusBtnPg3 = NexButton(3, 5, "chargePlusBtn");
-
-  NexButton waterMinusBtnPg3 = NexButton(3, 9, "waterMinusBtn");
-  NexButton waterPlusBtnPg3 = NexButton(3, 6, "waterPlusBtn");
-
-  NexButton oilMinusBtnPg3 = NexButton(3, 10, "oilMinusBtn");
-  NexButton oilPlusBtnPg3 = NexButton(3, 7, "oilPlusBtn");
-
-  NexText chargeLmtNrPg3 = NexText(3, 12, "chargeLmtNr");
-  NexText waterLmtNrPg3 = NexText(3, 13, "waterLmtNr");
-  NexText oilLmtNrPg3 = NexText(3, 14, "oilLmtNr");
+NexText chargeLmtNrPg3 = NexText(3, 12, "chargeLmtNr");
+NexText waterLmtNrPg3 = NexText(3, 13, "waterLmtNr");
+NexText oilLmtNrPg3 = NexText(3, 14, "oilLmtNr");
 
 int pageNumber = 0;
 
@@ -64,14 +60,6 @@ double outsideTempPin = A3;
 Warning warning = {0.00f, 0.00f, 0.00f};
 
 NexTouch *nex_Listen_List[] = {
-  /*NULL,
-  NULL,
-  NULL,
-  NULL,
-  NULL,
-  NULL,
-  NULL,
-  NULL*/
   &nextPageBtnPg0,
   &nextPageBtnPg1,
   &nextPageBtnPg2,
@@ -89,7 +77,7 @@ bool isEngineRunning = false;
 
 void setup() {  // Put your setup code here, to run once:
 
-  Serial.begin(9600);  // Start serial comunication at baud=9600
+  //Serial.begin(9600);  // Start serial comunication at baud=9600
   FirstScreenSerial.begin(9600);
 
   getParams();
@@ -129,8 +117,8 @@ void setUpPage(int number){
     break;
     case 1:
       setUpPage1();
-    case 2:    break;
-
+    case 2:    
+    break;
       setUpPage2();
     break;
     case 3:
@@ -172,24 +160,14 @@ void resetValues(){
 }
 
 void setUpPage0(){
-
-  /*nex_Listen_List[0] = NULL;
-  nex_Listen_List[1] = NULL;
-  nex_Listen_List[2] = NULL;
-  nex_Listen_List[3] = NULL;
-  nex_Listen_List[4] = NULL;
-  nex_Listen_List[5] = NULL;
-  nex_Listen_List[6] = NULL;*/
-
+  
   //Page 0 components
   NexText outTempTextPg0 = NexText(0, 2, "tempText");
   nextPageBtnPg0.attachPop(nextPagePopCAllback, &nextPageBtnPg0);
 
-  nex_Listen_List[0] =  &nextPageBtnPg0;
-
   char charVal[5];
 
-  page0.show();
+  //page0.show();
 
   dtostrf(sensorValues[3], 3, 1, charVal);
   outTempTextPg0.setText(charVal);
@@ -203,9 +181,7 @@ void setUpPage1(){
   NexText chargeTextPg1 = NexText(1, 4, "chargeText");
   nextPageBtnPg1.attachPop(nextPagePopCAllback, &nextPageBtnPg1);
 
-  nex_Listen_List[0] = &nextPageBtnPg1;
-
-  page1.show();
+  //page1.show();
 
   char charVal[5];
 
@@ -233,9 +209,7 @@ void setUpPage2(){
 
   nextPageBtnPg2.attachPop(nextPagePopCAllback, &nextPageBtnPg2);
 
-  nex_Listen_List[0] = &nextPageBtnPg2;
-
-  page2.show();
+  //page2.show();
 
   //temporarily holds data from vals
   char charVal[5];                
@@ -295,15 +269,7 @@ void setUpPage3(){
   oilMinusBtnPg3.attachPop(oilWarningMinusPopCallback, &oilMinusBtnPg3);
   oilPlusBtnPg3.attachPop(oilWarningPlusPopCallback, &oilPlusBtnPg3);
 
-  nex_Listen_List[0] = &nextPageBtnPg3;
-  /*nex_Listen_List[1] = &chargeMinusBtnPg3;
-  nex_Listen_List[2] = &chargePlusBtnPg3;
-  nex_Listen_List[3] = &waterMinusBtnPg3;
-  nex_Listen_List[4] = &waterPlusBtnPg3;
-  nex_Listen_List[5] = &oilMinusBtnPg3;
-  nex_Listen_List[6] = &oilPlusBtnPg3;*/
-
-  page3.show();
+  //page3.show();
 
   char value[6];
   dtostrf((warning.chargeWarningVal / 10 ), 3, 1, value);
