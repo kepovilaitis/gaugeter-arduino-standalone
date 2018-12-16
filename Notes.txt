@@ -41,3 +41,7 @@ https://www.youtube.com/watch?v=xwzE4Q0uz74
 
 Voltage divider
 x
+
+
+
+green color rgb  #81ff9c
